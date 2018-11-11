@@ -1,17 +1,21 @@
 import Head from "next/head";
-import Link from "next/link";
-import Header from "../components/Header"
 import withLayout from "../lib/withLayout";
+import PostLink from "../components/PostLink";
 
 const Index = () => (
   <div>
     <head>
       <title>Home | Elly's Store</title>
     </head>
-    <h1>Hello from the index</h1>{" "}
-    <Link href={"/about"}>
-      <a>About Page</a>
-    </Link>
+    <h1>Posts:</h1>{" "}
+    <ul>
+      <li>
+        <PostLink title={"Something"} />
+      </li>
+      <li>
+      <PostLink title={"Something Else"} / >
+      </li>
+    </ul>
   </div>
 );
 

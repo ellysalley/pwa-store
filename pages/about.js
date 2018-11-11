@@ -9,6 +9,7 @@ const About = () => (
     <h1>
       About page
     </h1>
+    <p>lorem ipsum</p>
   </div>
 );
 
