@@ -1,15 +1,32 @@
+import { Layout } from "antd";
 import App, { Container } from "next/app";
-import Header from "../components/Header";
 import React from "react";
 
-export default class MyApp extends App{
-  render(){
-    const { Component } = this.props;
+import withApollo from "../lib/withApollo";
+import { ApolloProvider } from "react-apollo";
+const { Footer } = Layout;
+
+class MyApp extends App {
+  static async getInitialProps({ Component, router, ctx }) {
+    let pageProps = {};
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
+    }
+    return { pageProps };
+  }
+  render() {
+    const { Component, pageProps, apollo } = this.props;
     return (
-      <Container>
-        <Header />
-        <Component />
-      </Container>
-    )
+      <ApolloProvider client={apollo}>
+        <Container>
+          <Layout>
+            <Component {...pageProps} />
+            <Footer>This is footer</Footer>
+          </Layout>
+        </Container>
+      </ApolloProvider>
+    );
   }
 }
+
+export default withApollo(MyApp);
