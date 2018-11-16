@@ -6,5 +6,23 @@ export const INDEX_QUERY = gql`
       id
       name
     }
+    onSale: products(where: { sale: true }) {
+      id
+      name
+      description
+      price
+      photo {
+        url
+      }
+    }
+    allProducts: products(where: { sale: false }) {
+      id
+      name
+      description
+      price
+      photo {
+        url
+      }
+    }
   }
 `;
