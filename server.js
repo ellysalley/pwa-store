@@ -15,6 +15,12 @@ app
       const queryParams = { name: req.params.name };
       app.render(req, res, actualPage, queryParams);
     });
+
+    server.get("/product/:id", (req, res) => {
+      const actualPage = "/category";
+      const queryParams = { name: req.params.name };
+      app.render(req, res, actualPage, queryParams);
+    });
     
     server.get("*", (req, res) => {
       return handle(req, res);
