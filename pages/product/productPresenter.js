@@ -1,1 +1,1 @@
-export default () => <h1>hello</h1>;
+export default ({ data }) => <h1>{data.product.name}</h1>;
