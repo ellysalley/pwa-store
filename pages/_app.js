@@ -1,7 +1,6 @@
 import { Layout } from "antd";
 import App, { Container } from "next/app";
 import React from "react";
-
 import withApollo from "../lib/withApollo";
 import { ApolloProvider } from "react-apollo";
 const { Footer } = Layout;
