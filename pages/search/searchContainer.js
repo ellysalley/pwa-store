@@ -10,7 +10,7 @@ export default class extends React.Component {
   render() {
     const { searchTerm, canSearch } = this.state;
     return (
-      <Query skip={!canSearch} query={SEARCH_QUERY} variables={searchTerm}>
+      <Query skip={!canSearch} query={SEARCH_QUERY} variables={{ searchTerm }}>
         {({ data }) => (
           <SearchPresenter
             searchTerm={searchTerm}

@@ -10,9 +10,9 @@ app
   .then(() => {
     const server = express();
 
-    server.get("/sw.js", (req, res) => {
-      app.serveStatic(req, res, resolve("./static/service-worker.js"));
-    });
+    // server.get("/sw.js", (req, res) => {
+    //   app.serveStatic(req, res, resolve("./static/service-worker.js"));
+    // });
 
     server.get("/category/:name", (req, res) => {
       const actualPage = "/category";

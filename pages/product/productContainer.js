@@ -13,7 +13,6 @@ class ProductContainer extends React.Component {
     };
   }
   render() {
-    console.log({ id });
     const { id } = this.props;
     return (
       <Query query={PRODUCT_QUERY} variables={{ id }}>

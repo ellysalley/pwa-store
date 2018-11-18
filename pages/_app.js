@@ -6,7 +6,7 @@ import { ApolloProvider } from "react-apollo";
 const { Footer } = Layout;
 
 class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);

@@ -8,7 +8,7 @@ import CartButton from "../../components/CartButton";
 export default ({ data, toggleCart }) => (
   <>
     <Head>
-      <title>{data.product.name} | Plastic Free Life Store</title>
+      <title>{data.product.name} | Plastic Free Store</title>
     </Head>
     <Header
       centerColumn={<h4>Product</h4>}

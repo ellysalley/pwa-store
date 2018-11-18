@@ -9,7 +9,7 @@ const { Content } = Layout;
 export default ({ data, updateSearchTerm, searchTerm }) => (
   <>
     <Head>
-      <title>Search | Plastic Free Life Store</title>
+      <title>Search | Plastic Free Store</title>
     </Head>
     <Header
       centerColumn={

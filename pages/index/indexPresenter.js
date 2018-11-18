@@ -9,12 +9,12 @@ const { Content } = Layout;
 export default ({ data }) => (
   <>
     <Head>
-      <title>Home | Plastic Free Life Store</title>
+      <title>Home | Plastic Free Store</title>
     </Head>
     <Header
-      centerColumn={<h4>Plastic Free Life Store</h4>}
+      centerColumn={<h4>Plastic Free Store</h4>}
       rightColumn={<CartButton />}
-      leftColumn={<Button href="/search" text="Search" btnIcon={"search"} />}
+      leftColumn={<Button href="/search" text="Search" />}
     />
     <Content style={{ padding: "0 50px" }}>
       <div
