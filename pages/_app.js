@@ -1,12 +1,14 @@
 import { Layout } from "antd";
 import App, { Container } from "next/app";
 import React from "react";
-import withApollo from "../lib/withApollo";
 import { ApolloProvider } from "react-apollo";
+import withApollo from "../lib/withApollo";
+import withNProgress from "next-nprogress";
+import NProgress from "next-nprogress/component";
 const { Footer } = Layout;
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
+  static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
@@ -14,10 +16,10 @@ class MyApp extends App {
     return { pageProps };
   }
 
-  componentDidCatch() {
+  componentDidMount() {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
-        .register("sw.js")
+        .register("/sw.js")
         .then(result => console.log("SW Registered :", result))
         .catch(error => console.log("Can't register SW :", error));
     }
@@ -25,16 +27,17 @@ class MyApp extends App {
   render() {
     const { Component, pageProps, apollo } = this.props;
     return (
-      <ApolloProvider client={apollo}>
         <Container>
+          <NProgress color="black" spinner={true} />
+          <ApolloProvider client={apollo}>
           <Layout>
             <Component {...pageProps} />
             <Footer>This is footer</Footer>
           </Layout>
+          </ApolloProvider>
         </Container>
-      </ApolloProvider>
     );
   }
 }
 
-export default withApollo(MyApp);
+export default withNProgress()(withApollo(MyApp));
