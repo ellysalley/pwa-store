@@ -12,8 +12,11 @@ export default class MyDocumnet extends Document {
           <title>Plastic Free Life Store</title>
           <meta name="author" content={"Elly Han"} />
           <link rel="manifest" href="/static/manifest.json" />
-          <link href="//cdnjs.cloudflare.com/ajax/libs/antd/3.8.1/antd.min.css" rel="stylesheet" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.8.1/antd.min.css" rel="stylesheet" />
           <style>{`body { background-color: #EFF2F5!important}`}</style>
+          <meta name="theme-color" content="black" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="Plastic Free Store" />
         </Head>
         <body>
           <Main />
