@@ -6,7 +6,7 @@ const supportedCarts = [
   {
     supportedMethods: "basic-card",
     data: {
-      supportedNetworks: ["visa", "mastercard", "unionpay", "discover", "amex"],
+      supportedNetworks: ["visa", "mastercard", "amex", "discover", "unionpay"],
       supportedTypes: ["debit", "credit"]
     }
   }

@@ -9,7 +9,7 @@ const reducerFn = (price, product) => price + product.price;
 export default ({ data, onPay }) => (
   <>
     <Head>
-      <title>Cart | Plastic Free Life Store</title>
+      <title>Cart | Plastic Free Store</title>
     </Head>
     <Header
       centerColumn={<h4>Cart</h4>}
