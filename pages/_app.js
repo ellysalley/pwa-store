@@ -31,7 +31,7 @@ class MyApp extends App {
                     .subscribe({
                       userVisibleOnly: true,
                       applicationServerKey: convertDataURIToBinary(
-                        "BMQl6dWfLFq-QWi4XR1SAWSzBSMRSenCGO7ktFoazGf7umgwPcvnp_r7xmJyBKa_0av4reD1EJCVCyPu4qu2X80"
+                        "BMdDVf21QPjhN5SXV5k3WYosh-xAvfJwdNw0LFhcsP409fCa9wlZ33ljoP8VcKfoXqb38bsPh4Y1hycvNPMPzR8"
                       )
                     })
                     .then(pushSubscriptionObject => {
